@@ -1,0 +1,48 @@
+@mixin backgroundCover($url) {
+  background-image: url($url);
+  background-size: cover;
+}
+
+@mixin spriteImage($url, $width, $height) {
+  background-image: url($url);
+  background-size: $width $height;
+}
+
+@mixin moveVertical($start, $end) {
+  $animation-name: unique-id() !global;
+  @keyframes #{$animation-name} {
+      0% {
+          transform: translateY($start);
+      }
+      100% {
+          transform: translateY($end);
+      }
+  }
+  animation-name: $animation-name;   
+}
+
+@mixin rotateItem($start, $end) {
+  $animation-name: unique-id() !global;
+  @keyframes #{$animation-name} {
+      0% {
+          transform: rotate($start);
+      }
+      100% {
+          transform: rotate($end);
+      }
+  }
+  animation-name: $animation-name;   
+}
+
+@mixin scaleItem($start, $end) {
+  $animation-name: unique-id() !global;
+  @keyframes #{$animation-name} {
+      0% {
+          transform: scale($start);
+      }
+      100% {
+          transform: scale($end);
+      }
+  }
+  animation-name: $animation-name;   
+}

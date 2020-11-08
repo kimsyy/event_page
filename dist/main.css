@@ -1,0 +1,750 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@keyframes neonEffect01 {
+  0% {
+    filter: brightness(0.7); }
+  25% {
+    filter: brightness(1); }
+  100% {
+    filter: brightness(1); } }
+
+@keyframes neonEffectMoneyInner {
+  0% {
+    filter: brightness(0.7); }
+  5% {
+    filter: brightness(1); }
+  10% {
+    filter: brightness(0.7); }
+  15% {
+    filter: brightness(1); }
+  100% {
+    filter: brightness(1); } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes neonEffectSnsOuter {
+  0% {
+    filter: brightness(1); }
+  5% {
+    filter: brightness(0.5); }
+  10% {
+    filter: brightness(1); }
+  15% {
+    filter: brightness(0.5); }
+  20% {
+    filter: brightness(1); }
+  100% {
+    filter: brightness(1); } }
+
+@keyframes downTopLayer {
+  0% {
+    transform: translateY(-100%); }
+  50% {
+    transform: translateY(0); }
+  65% {
+    transform: translateY(-40%); }
+  80% {
+    transform: translateY(0%); }
+  90% {
+    transform: translateY(-10%); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes upBottomLayer {
+  0% {
+    transform: translateY(100%); }
+  50% {
+    transform: translateY(0); }
+  65% {
+    transform: translateY(40%); }
+  80% {
+    transform: translateY(0%); }
+  90% {
+    transform: translateY(10%); }
+  100% {
+    transform: translateY(0); } }
+
+html,
+body {
+  width: 100%;
+  height: 100%; }
+
+.blind {
+  position: absolute !important;
+  font-size: 0 !important;
+  visibility: hidden !important; }
+
+body {
+  background-color: #2e2925; }
+  body.show-layer {
+    overflow: hidden; }
+  body .wrap-bg {
+    background-image: url("../image/bg.jpg");
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%; }
+  body .content {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 80px; }
+    body .content .top-txt {
+      position: relative;
+      box-sizing: border-box;
+      height: 35px;
+      border-bottom: 1px solid #644a37;
+      background: url("../image/bg_top_txt.png") 0 0 repeat-x; }
+      body .content .top-txt .txt {
+        background-image: url("../image/spr_top-txt.png");
+        background-size: 112px 126px;
+        position: absolute; }
+        body .content .top-txt .txt.left {
+          top: 11px;
+          left: 12px;
+          width: 55px;
+          height: 11px;
+          background-position: 0 -115px; }
+        body .content .top-txt .txt.center {
+          top: 11px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 89px;
+          height: 11px;
+          background-position: 0 -100px; }
+        body .content .top-txt .txt.right {
+          top: 0;
+          right: 0;
+          width: 112px;
+          height: 78px;
+          background-position: 0 0; }
+    body .content main .title {
+      position: relative;
+      margin: 75px auto 0;
+      width: 335px;
+      height: 180px; }
+      body .content main .title .txt-drop-the {
+        background-image: url("../image/txt_drop_the.png");
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        left: 50px;
+        width: 220px;
+        height: 90px;
+        animation-delay: 3s;
+        animation-name: neonEffect01;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; }
+      body .content main .title .txt-money-outer {
+        background-image: url("../image/txt_money_outer.png");
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 335px;
+        height: 180px;
+        animation-delay: 4s;
+        animation-name: neonEffect01;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; }
+      body .content main .title .txt-money-inner {
+        background-image: url("../image/txt_money_inner.png");
+        background-size: cover;
+        position: absolute;
+        top: 65px;
+        left: 110px;
+        width: 52px;
+        height: 53px;
+        animation-delay: 2s;
+        animation-name: neonEffectMoneyInner;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; }
+      body .content main .title .txt-title {
+        background-image: url("../image/txt_title_01.png");
+        background-size: cover;
+        position: absolute;
+        top: 110px;
+        left: 55px;
+        width: 234px;
+        height: 45px; }
+      body .content main .title .effect-fire {
+        background-image: url("../image/effect_fire.png");
+        background-size: cover;
+        position: absolute;
+        top: -42px;
+        left: 34px;
+        width: 80px;
+        height: 80px;
+        animation-delay: .5s;
+        animation-name: fadeIn;
+        animation-duration: .5s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        opacity: 0; }
+    body .content main .img-coin-left-01 {
+      background-image: url("../image/coin_left_01.png");
+      background-size: cover;
+      position: absolute;
+      width: 48px;
+      height: 127px; }
+      body .content main .img-coin-left-01.side {
+        animation-name: u53cfb57f;
+        top: 0;
+        left: 0px;
+        animation-duration: .3s;
+        animation-fill-mode: forwards;
+        transition: top .2s; }
+
+@keyframes u53cfb57f {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(160px); } }
+    body .content main .img-coin-left-02 {
+      background-image: url("../image/coin_left_02.png");
+      background-size: cover;
+      position: absolute;
+      width: 39px;
+      height: 53px; }
+      body .content main .img-coin-left-02.side {
+        animation-name: ub34c1de9;
+        top: 0;
+        left: 55px;
+        animation-duration: .3s;
+        animation-fill-mode: forwards;
+        transition: top .3s; }
+
+@keyframes ub34c1de9 {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(299px); } }
+    body .content main .img-coin-left-03 {
+      background-image: url("../image/coin_left_03.png");
+      background-size: cover;
+      position: absolute;
+      width: 22px;
+      height: 56px; }
+      body .content main .img-coin-left-03.side {
+        animation-name: uc882821e;
+        top: 0;
+        left: 0px;
+        animation-duration: .4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+        transition: top .3s; }
+
+@keyframes uc882821e {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(367px); } }
+    body .content main .img-coin-right-01 {
+      background-image: url("../image/coin_right_01.png");
+      background-size: cover;
+      position: absolute;
+      width: 60px;
+      height: 83px; }
+      body .content main .img-coin-right-01.side {
+        animation-name: u03546a5a;
+        top: 0;
+        right: 0;
+        animation-duration: .3s;
+        animation-fill-mode: forwards;
+        transition: top .3s; }
+
+@keyframes u03546a5a {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(233px); } }
+    body .content main .img-coin-right-02 {
+      background-image: url("../image/coin_right_02.png");
+      background-size: cover;
+      position: absolute;
+      width: 33px;
+      height: 52px; }
+      body .content main .img-coin-right-02.side {
+        animation-name: u535f81f7;
+        top: 0;
+        right: 36px;
+        animation-duration: .3s;
+        animation-fill-mode: forwards;
+        transition: top .3s; }
+
+@keyframes u535f81f7 {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(281px); } }
+    body .content main .img-coin-right-03 {
+      background-image: url("../image/coin_right_03.png");
+      background-size: cover;
+      position: absolute;
+      width: 57px;
+      height: 94px; }
+      body .content main .img-coin-right-03.side {
+        animation-name: u28cc14e8;
+        top: 0;
+        right: 0px;
+        animation-duration: .4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+        transition: top .3s; }
+
+@keyframes u28cc14e8 {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(380px); } }
+    body .content main .center-coins {
+      animation-name: u95f4a142;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out; }
+
+@keyframes u95f4a142 {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(2000px); } }
+      body .content main .center-coins .img-coin-left-02.coin-01 {
+        transform: scale(2);
+        top: 0;
+        left: 10%; }
+      body .content main .center-coins .img-coin-left-02.coin-04 {
+        transform: scale(1.5);
+        top: 250px;
+        left: 55%; }
+      body .content main .center-coins .img-coin-right-01.coin-02 {
+        transform: scale(3);
+        top: 450px;
+        left: 40%; }
+      body .content main .center-coins .img-coin-right-01.coin-05 {
+        transform: scale(2);
+        top: 300px;
+        left: 20%; }
+      body .content main .center-coins .img-coin-right-02.coin-03 {
+        transform: scale(2.5);
+        top: 50px;
+        left: 70%; }
+      body .content main .center-coins .img-coin-right-02.coin-06 {
+        transform: scale(2);
+        top: 120px;
+        left: 30%; }
+    body .content main .main-img {
+      position: relative;
+      margin: 0 auto;
+      width: 305px;
+      height: 182px; }
+      body .content main .main-img .money-img-01 {
+        animation-name: ub1eabc2c;
+        background-image: url("../image/main_money_01.png");
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 305px;
+        height: 182px;
+        animation-iteration-count: infinite;
+        animation-duration: .7s; }
+
+@keyframes ub1eabc2c {
+  0% {
+    transform: translateY(-5px); }
+  100% {
+    transform: translateY(0); } }
+      body .content main .main-img .money-img-02 {
+        animation-name: udfcc8eed;
+        background-image: url("../image/main_money_02.png");
+        background-size: cover;
+        position: absolute;
+        top: 132px;
+        left: 85px;
+        width: 118px;
+        height: 58px;
+        animation-iteration-count: infinite;
+        animation-duration: .7s; }
+
+@keyframes udfcc8eed {
+  0% {
+    transform: scale(1.1); }
+  100% {
+    transform: scale(1); } }
+      body .content main .main-img .money-img-03 {
+        animation-name: ua12a31dd;
+        background-image: url("../image/main_money_03.png");
+        background-size: cover;
+        position: absolute;
+        top: 145px;
+        left: 30px;
+        width: 50px;
+        height: 41px;
+        animation-iteration-count: infinite;
+        animation-duration: .7s;
+        transform-origin: left bottom; }
+
+@keyframes ua12a31dd {
+  0% {
+    transform: rotate(-20deg); }
+  100% {
+    transform: rotate(0); } }
+      body .content main .main-img .money-img-04 {
+        animation-name: u95498a78;
+        background-image: url("../image/main_money_04.png");
+        background-size: cover;
+        position: absolute;
+        top: 130px;
+        left: 210px;
+        width: 52px;
+        height: 40px;
+        animation-iteration-count: infinite;
+        animation-duration: .7s;
+        transform-origin: right bottom; }
+
+@keyframes u95498a78 {
+  0% {
+    transform: rotate(20deg); }
+  100% {
+    transform: rotate(0); } }
+    body .content main .txt-reword {
+      margin: 20px auto 0;
+      width: 280px;
+      height: 120px; }
+      body .content main .txt-reword img {
+        vertical-align: top;
+        width: 100%;
+        height: 100%; }
+    body .content main .wrap-sns {
+      position: relative;
+      margin: 30px auto 0;
+      width: 350px;
+      height: 99px; }
+      body .content main .wrap-sns .sns-outer {
+        background-image: url("../image/sns_outer.png");
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 350px;
+        height: 99px;
+        animation-delay: 3s;
+        animation-name: neonEffectSnsOuter;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        filter: brightness(0.5); }
+      body .content main .wrap-sns .sns-inner {
+        background-image: url("../image/sns_inner.png");
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 350px;
+        height: 99px; }
+        body .content main .wrap-sns .sns-inner a {
+          position: absolute;
+          top: 43px;
+          display: inline-block;
+          width: 30px;
+          height: 30px; }
+          body .content main .wrap-sns .sns-inner a.kakaotalk {
+            left: 53px; }
+          body .content main .wrap-sns .sns-inner a.kakaostory {
+            left: 123px; }
+          body .content main .wrap-sns .sns-inner a.facebook {
+            left: 193px; }
+          body .content main .wrap-sns .sns-inner a.twitter {
+            left: 266px; }
+    body .content main .coin-bottom {
+      margin: 10px auto 0;
+      width: 375px;
+      height: 92px; }
+      body .content main .coin-bottom img {
+        vertical-align: top;
+        width: 100%;
+        height: 100%; }
+    body .content main .btn-register {
+      box-sizing: border-box;
+      position: fixed;
+      bottom: 0;
+      left: calc(50% + 5px);
+      transform: translateX(-50%);
+      width: 367px;
+      height: 72px; }
+      body .content main .btn-register img {
+        vertical-align: top;
+        width: 100%;
+        height: auto; }
+  body .wrap-layer {
+    display: none;
+    position: absolute;
+    top: 0;
+    height: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; }
+    body .wrap-layer .top-area {
+      background-image: url("../image/bg_top_register.png");
+      background-size: cover;
+      position: relative;
+      width: auto;
+      height: 50%;
+      animation-duration: .5s;
+      animation-name: downTopLayer;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear; }
+      body .wrap-layer .top-area .btn-close {
+        background-image: url("../image/spr_register.png");
+        background-size: 400px 300px;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-position: 0 0; }
+      body .wrap-layer .top-area .w-img {
+        background-image: url("../image/spr_register.png");
+        background-size: 400px 300px;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-position: 0 -30px; }
+      body .wrap-layer .top-area .txt {
+        background-image: url("../image/spr_register.png");
+        background-size: 400px 300px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 275px;
+        height: 100px;
+        background-position: -100px -30px; }
+    body .wrap-layer .bottom-area {
+      background-image: url("../image/bg_bottom_register.png");
+      background-size: cover;
+      width: auto;
+      height: 50%;
+      animation-duration: .5s;
+      animation-name: upBottomLayer;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear; }
+      body .wrap-layer .bottom-area .txt {
+        background-image: url("../image/spr_register.png");
+        background-size: 400px 300px;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 293px;
+        height: 155px;
+        background-position: 0 -130px; }
+        body .wrap-layer .bottom-area .txt .btn-one {
+          position: absolute;
+          top: 7px;
+          right: 10px;
+          display: inline-block;
+          width: 57px;
+          height: 24px; }
+        body .wrap-layer .bottom-area .txt .btn-update {
+          position: absolute;
+          bottom: 11px;
+          right: 29px;
+          display: inline-block;
+          width: 78px;
+          height: 22px; }
+    body .wrap-layer .wrap-btn-send {
+      position: absolute;
+      bottom: 0;
+      left: calc(50% + 3px);
+      transform: translateX(-50%);
+      width: 367px;
+      height: 74px; }
+      body .wrap-layer .wrap-btn-send .btn-send {
+        animation-name: ue940b462;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        animation-duration: .3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear; }
+
+@keyframes ue940b462 {
+  0% {
+    transform: translateY(100%); }
+  100% {
+    transform: translateY(0); } }
+        body .wrap-layer .wrap-btn-send .btn-send img {
+          vertical-align: top;
+          width: 100%;
+          height: auto; }
+  body.show-layer .wrap-layer {
+    display: block; }
+
+@media (max-width: 360px) {
+  body .content main .title {
+    width: 320px; }
+    body .content main .title .txt-money-outer {
+      width: 320px; }
+  body .content main .wrap-sns {
+    width: 300px;
+    height: 90px; }
+    body .content main .wrap-sns .sns-outer {
+      width: 300px;
+      height: 90px;
+      background-size: contain; }
+    body .content main .wrap-sns .sns-inner {
+      width: 300px;
+      height: 90px;
+      background-size: contain; }
+  body .content main .btn-register {
+    width: 300px;
+    height: auto; }
+  body .content main .coin-bottom {
+    width: 100%;
+    height: auto; }
+  body .wrap-layer .wrap-btn-send {
+    width: 300px;
+    height: auto; } }
